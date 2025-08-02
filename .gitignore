@@ -1,0 +1,26 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+
+# Log files
+logs/*.txt
+logs/*_encrypted
+
+# Virtual environments
+.venv/
+env/
+ENV/
+
+# System files
+.DS_Store
+*.swp
+
+# VSCode settings (optional)
+.vscode/
+
+# Backup files
+*~
+
+# OS-specific
+Thumbs.db
+ehthumbs.db
