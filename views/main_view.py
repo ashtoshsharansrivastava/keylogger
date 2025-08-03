@@ -4,6 +4,7 @@ from PySide6.QtCore import QSize, Qt
 from utils.auth import verify_system_password
 
 from views.password_dialog import PasswordDialog
+from views.error_dialog import ErrorDialog
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -73,3 +74,12 @@ class MainWindow(QMainWindow):
                 self.show_error("Authentication Failed", "Incorrect password.")
                 return False
         return False
+    
+    def show_error(self, message):
+        from views.error_dialog import ErrorDialog
+        dialog = ErrorDialog(message)
+        dialog.exec()
+
+
+    
+

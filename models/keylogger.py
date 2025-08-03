@@ -50,3 +50,11 @@ def stop_logging(password):
         print("[KEYLOGGER STOPPED]")
         encrypt_file(LOG_FILE, ENCRYPTED_FILE, password)
         print("[ENCRYPTION DONE]")
+        
+def force_stop():
+    global listener
+    if listener is not None:
+        listener.stop()
+        listener = None
+        print("[KEYLOGGER FORCEFULLY STOPPED]")
+        

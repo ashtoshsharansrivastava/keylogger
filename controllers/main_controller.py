@@ -39,3 +39,7 @@ class MainController:
             self.view.status_label.setText(f"Decrypted to: {output_file}")
         except Exception as e:
             self.view.show_error(str(e))
+    def force_stop_keylogger(self):
+        from models.keylogger import force_stop
+        force_stop()
+        
