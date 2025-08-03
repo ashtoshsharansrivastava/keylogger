@@ -47,6 +47,10 @@ class MainWindow(QMainWindow):
         self.decrypt_button.setIconSize(QSize(70, 100))
         self.decrypt_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         self.decrypt_button.setStyleSheet(button_style)
+                
+        self.start_button.setFocusPolicy(Qt.NoFocus)
+        self.stop_button.setFocusPolicy(Qt.NoFocus)
+        self.decrypt_button.setFocusPolicy(Qt.NoFocus)
 
         layout = QVBoxLayout()
         layout.addWidget(self.status_label)
@@ -59,6 +63,7 @@ class MainWindow(QMainWindow):
         container = QWidget()
         container.setLayout(layout)
         self.setCentralWidget(container)
+        self.setFocus()
 
     def prompt_password(self, prompt_text):
         dialog = PasswordDialog(prompt_text, self)

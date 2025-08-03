@@ -13,6 +13,7 @@ key_log = ""
 listener = None
 
 
+
 def on_press(key):
     global key_log
     try:
